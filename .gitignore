@@ -1,0 +1,29 @@
+# IDE / editor
+.idea/
+.vscode/
+*.iml
+
+# Claude Code
+.claude/
+
+# Local docs / research (keep locally, not in repo)
+DEPLOY_SELECTEL.md
+deep-research-report.md
+lms_user_object.md
+
+# Environment files
+#.env
+#**/.env
+
+# Go build output
+*.exe
+*.out
+/bin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp dev files
+*.tmp
+set_redis.sh
