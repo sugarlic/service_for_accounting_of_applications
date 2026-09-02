@@ -1,6 +1,6 @@
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
 
-CREATE TABLE application (
+CREATE TABLE applications (
                        id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 
                        name TEXT NOT NULL,
@@ -23,10 +23,10 @@ CREATE TABLE application (
 );
 
 CREATE INDEX idx_application_status
-    ON application(status);
+    ON applications(status);
 
 CREATE INDEX idx_application_created_at
-    ON application(created_at DESC);
+    ON applications(created_at DESC);
 
 CREATE INDEX idx_application_status_created_at
-    ON application(status, created_at DESC);
+    ON applications(status, created_at DESC);

@@ -16,6 +16,7 @@ WORKDIR /app
 RUN apk add --no-cache ca-certificates tzdata
 
 COPY --from=builder /app/application-service ./application-service
+COPY --from=builder /app/web ./web
 
 EXPOSE 8080
 

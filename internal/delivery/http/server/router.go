@@ -31,6 +31,12 @@ func NewRouter(
 	// Health
 	r.GET("/health", func(c *gin.Context) { c.JSON(200, gin.H{"status": "ok"}) })
 
+	r.Static("/static", "./web")
+
+	r.GET("/", func(c *gin.Context) {
+		c.File("./web/index.html")
+	})
+
 	admin := r.Group("/admin")
 	{
 		admin.POST("/applications", applicationHandler.CreateApplication)

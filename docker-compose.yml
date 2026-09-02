@@ -23,7 +23,7 @@ services:
     container_name: application-service
     environment:
       DATABASE_URL: postgres://postgres:postgres@postgres:5432/application_service?sslmode=disable
-      CRM_API_KEY: super-secret-key
+      CRM_API_KEY: test-api-key
       HTTP_ADDR: ":8080"
     ports:
       - "8080:8080"

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявки</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Заявки</h1>
+
+    <section class="card">
+        <h2>Новая заявка</h2>
+
+        <form id="application-form">
+            <div class="grid">
+                <label>
+                    Имя
+                    <input type="text" id="name" required>
+                </label>
+
+                <label>
+                    Телефон
+                    <input type="text" id="phone" required>
+                </label>
+
+                <label>
+                    Источник
+                    <input type="text" id="source" placeholder="website, crm, phone">
+                </label>
+
+                <label class="full-width">
+                    Комментарий
+                    <textarea id="comment" rows="3"></textarea>
+                </label>
+            </div>
+
+            <button type="submit">Создать заявку</button>
+        </form>
+
+        <div id="form-message"></div>
+    </section>
+
+    <section class="card">
+        <div class="toolbar">
+            <h2>Список заявок</h2>
+
+            <label>
+                Статус
+                <select id="status-filter">
+                    <option value="">Все</option>
+                    <option value="new">Новая</option>
+                    <option value="in_progress">В работе</option>
+                    <option value="success">Успешно</option>
+                    <option value="rejected">Отказ</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Телефон</th>
+                    <th>Источник</th>
+                    <th>Комментарий</th>
+                    <th>Статус</th>
+                    <th>Создана</th>
+                </tr>
+                </thead>
+                <tbody id="applications-body"></tbody>
+            </table>
+        </div>
+    </section>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
